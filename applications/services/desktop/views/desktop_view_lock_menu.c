@@ -93,25 +93,25 @@ void desktop_lock_menu_draw_callback(Canvas* canvas, void* model) {
 
         switch(i) {
         case DesktopLockMenuIndexLefthandedMode:
-            icon = &I_CC_LefthandedMode_16x16;
+            icon = &I_CC_Lock_16x16;
             enabled = furi_hal_rtc_is_flag_set(FuriHalRtcFlagHandOrient);
             break;
         case DesktopLockMenuIndexSettings:
-            icon = &I_CC_Settings_16x16;
+            icon = &I_CC_Lock_16x16;
             break;
         case DesktopLockMenuIndexDarkMode:
-            icon = &I_CC_DarkMode_16x16;
+            icon = &I_CC_Lock_16x16;
             enabled = momentum_settings.dark_mode;
             break;
         case DesktopLockMenuIndexLock:
             icon = &I_CC_Lock_16x16;
             break;
         case DesktopLockMenuIndexBluetooth:
-            icon = &I_CC_Bluetooth_16x16;
+            icon = &I_CC_Lock_16x16;
             enabled = m->lock_menu->bt->bt_settings.enabled;
             break;
         case DesktopLockMenuIndexMomentum:
-            icon = &I_CC_Momentum_16x16;
+            icon = &I_CC_Lock_16x16;
             break;
         case DesktopLockMenuIndexBrightness:
             icon = &I_Pin_star_7x7;

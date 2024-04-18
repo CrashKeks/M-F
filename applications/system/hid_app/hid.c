@@ -261,7 +261,7 @@ int32_t hid_ble_app(void* p) {
     BleProfileHidParams params = {
         .bonding = true,
         .pairing = GapPairingPinCodeVerifyYesNo,
-        .name = "whatever",
+        .name = "JBL",
         .mac = {0x12, 0x34, 0x56, 0x78, 0x90, 0x00},
     };
 
