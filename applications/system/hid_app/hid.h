@@ -5,7 +5,7 @@
 #include <furi_hal_usb.h>
 #include <furi_hal_usb_hid.h>
 
-#include <extra_profiles/hid_profile.h>
+#include "ble_hid.h"
 
 #include <bt/bt_service/bt.h>
 #include <gui/gui.h>

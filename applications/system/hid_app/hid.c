@@ -1,5 +1,5 @@
 #include "hid.h"
-#include <extra_profiles/hid_profile.h>
+#include "ble_hid.h"
 #include <profiles/serial_profile.h>
 #include "views.h"
 #include <notification/notification_messages.h>
@@ -258,7 +258,14 @@ int32_t hid_ble_app(void* p) {
 
     furi_record_close(RECORD_STORAGE);
 
-    app->ble_hid_profile = bt_profile_start(app->bt, ble_profile_hid, NULL);
+    BleProfileHidParams params = {
+        .bonding = true,
+        .pairing = GapPairingPinCodeVerifyYesNo,
+        .name = "whatever",
+        .mac = {0x12, 0x34, 0x56, 0x78, 0x90, 0x00},
+    };
+
+    app->ble_hid_profile = bt_profile_start(app->bt, ble_profile_hid, &params);
 
     furi_check(app->ble_hid_profile);
 

@@ -17,11 +17,11 @@ const char* archive_get_flipper_app_name(ArchiveFileTypeEnum file_type) {
     case ArchiveFileTypeIButton:
         return "iButton";
     case ArchiveFileTypeNFC:
-        return "NFC";
+        return EXT_PATH("apps/CFN/nfc.fap");
     case ArchiveFileTypeSubGhz:
         return "Sub-GHz";
     case ArchiveFileTypeLFRFID:
-        return "125 kHz RFID";
+        return EXT_PATH("apps/DIFR/lfrfid.fap");
     case ArchiveFileTypeInfrared:
         return "Infrared";
     case ArchiveFileTypeSubghzPlaylist:

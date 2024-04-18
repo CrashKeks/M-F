@@ -52,7 +52,7 @@ int main(void) {
         // But if we do, abandon to avoid bootloops
         furi_hal_rtc_set_boot_mode(FuriHalRtcBootModeNormal);
         furi_hal_power_reset();
-    } else if(!furi_hal_gpio_read(&gpio_button_up)) {
+    } else if(!furi_hal_gpio_read(&gpio_button_down)) {
         furi_hal_light_sequence("rgb WR");
         flipper_boot_recovery_exec();
         furi_hal_power_reset();

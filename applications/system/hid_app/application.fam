@@ -1,6 +1,6 @@
 App(
     appid="hid_usb",
-    name="USB Remote",
+    name="USR",
     apptype=FlipperAppType.EXTERNAL,
     entry_point="hid_usb_app",
     stack_size=1 * 1024,
@@ -17,13 +17,12 @@ App(
 
 App(
     appid="hid_ble",
-    name="Bluetooth Remote",
+    name="BR",
     apptype=FlipperAppType.EXTERNAL,
     entry_point="hid_ble_app",
     stack_size=1 * 1024,
     sources=["*.c", "!transport_usb.c"],
     cdefines=["HID_TRANSPORT_BLE"],
-    fap_libs=["ble_profile"],
     fap_description="Use Flipper as a HID remote control over Bluetooth",
     fap_version="1.0",
     fap_category="Bluetooth",
